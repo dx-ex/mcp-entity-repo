@@ -1,0 +1,14 @@
+apiVersion: mcp.backstage.io/v1alpha1
+kind: MCPServer
+metadata:
+  name: standalone-mcp
+  title: Standalone MCP Server
+  description: A standalone MCP server for testing
+  links:
+    - url: https://wemr2zw8bh.us-east-1.awsapprunner.com/mcp
+      title: MCP Server Endpoint
+spec:
+  owner: group:team-alpha
+  transport:
+    type: streamable-http
+    endpoint: https://wemr2zw8bh.us-east-1.awsapprunner.com/mcp
