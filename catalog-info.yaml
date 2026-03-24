@@ -3,12 +3,20 @@ kind: MCPServer
 metadata:
   name: standalone-mcp
   title: Standalone MCP Server
-  description: A standalone MCP server for testing
+  description: Self-hosted MCP server used for integration testing and development. Runs independently of AWS AgentCore Gateway, useful for validating MCP protocol compliance and local tool development.
+  tags:
+    - testing
+    - standalone
+    - development
+  annotations:
+    backstage.io/source-location: url:https://github.com/dx-ex/mcp-entity-repo
   links:
     - url: https://wemr2zw8bh.us-east-1.awsapprunner.com/mcp
       title: MCP Server Endpoint
 spec:
   owner: group:team-alpha
+  system: dev-mcp
+  lifecycle: experimental
   transport:
     type: streamable-http
     endpoint: https://wemr2zw8bh.us-east-1.awsapprunner.com/mcp
